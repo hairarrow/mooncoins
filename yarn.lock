@@ -4895,7 +4895,7 @@ firebase@^5.11.1:
     "@firebase/polyfill" "0.3.13"
     "@firebase/storage" "0.2.15"
 
-firebaseui@^3.6.0:
+firebaseui@^3.2.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/firebaseui/-/firebaseui-3.6.0.tgz#35ffada85e7c7ecfe77b2ce206cb90c04449c419"
   integrity sha512-q9MP5P2F+SIzBsz3EFdI7AJvsJLFDGZvk7K3XHS5GXX6hCDbO7PlR/avatbeDJH912inXNFGyLtxSXVCeOCt3w==
@@ -9454,6 +9454,13 @@ react-error-overlay@^5.1.5:
   version "5.1.5"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.1.5.tgz#884530fd055476c764eaa8ab13b8ecf1f57bbf2c"
   integrity sha512-O9JRum1Zq/qCPFH5qVEvDDrVun8Jv9vbHtZXCR1EuRj9sKg1xJTlHxBzU6AkCzpvxRLuiY4OKImy3cDLQ+UTdg==
+
+react-firebaseui@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/react-firebaseui/-/react-firebaseui-3.1.2.tgz#a1651713a3dae989b2fb7ccb0c288afd8ae28f30"
+  integrity sha512-lpNvIPjy9rijSbaARElIooXUtFlyFZ2VUzAXi3AMximOUfLo1De0lBfoFjEiSJjC0ItNyTn4KoKIawACcElLjw==
+  dependencies:
+    firebaseui "^3.2.0"
 
 react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.4:
   version "16.8.6"

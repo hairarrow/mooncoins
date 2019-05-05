@@ -4,7 +4,8 @@ export const actions = Types("USER", {
   setLoading: "SET_LOADING",
   setId: "SET_ID",
   updateNotifications: "UPDATE_NOTIFICATIONS",
-  anonymousLogin: "ANONYMOUS_LOGIN"
+  anonymousLogin: "ANONYMOUS_LOGIN",
+  logOut: "LOG_OUT"
 });
 
 const initialState = {
@@ -22,6 +23,8 @@ const UserReducer = (state = initialState, action) => {
       return { ...state, userId: action.userId };
     case actions.anonymousLogin:
       return { ...state, isAnonymous: action.isAnonymous };
+    case actions.updateNotifications:
+      return { ...state, receiveNotifications: action.receiveNotifications };
     default:
       return { ...state };
   }

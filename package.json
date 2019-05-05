@@ -5,10 +5,10 @@
   "dependencies": {
     "antd": "^3.16.6",
     "firebase": "^5.11.1",
-    "firebaseui": "^3.6.0",
     "moment": "^2.24.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-firebaseui": "^3.1.2",
     "react-scripts": "3.0.0",
     "redux": "^4.0.1",
     "redux-react-hook": "^3.3.2",
@@ -21,7 +21,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy:hosting": "react-scripts build",
+    "deploy:hosting": "firebase deploy --only hosting"
   },
   "eslintConfig": {
     "extends": "react-app"
