@@ -14,7 +14,6 @@ async function sendEmail(to) {
       auth: { user, pass }
     });
 
-    console.log(to);
     const info = await transporter.sendMail({
       from: `"MOONCOINS 🚀" <no-reply@${domain}>`,
       to,
@@ -31,7 +30,6 @@ async function sendEmail(to) {
     `
     });
 
-    console.info(info);
     console.info(`Message sent: ${info.messageId}`);
   } catch (error) {
     return console.error({ error });

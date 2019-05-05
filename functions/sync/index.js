@@ -52,5 +52,5 @@ exports.sync = functions.https.onRequest(async (_, res) => {
 });
 
 exports.scheduledSync = functions.pubsub
-  .schedule("every 1 minutes")
+  .schedule("every 5 minutes")
   .onRun(sync);

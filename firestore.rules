@@ -1,6 +1,10 @@
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /{document=**} {
+    match /Lists/{id} {
+      allow read: if request.auth.uid != null;
+    }
+
+    match /Currencies/{id} {
       allow read: if request.auth.uid != null;
     }
   }
