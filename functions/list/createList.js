@@ -1,6 +1,7 @@
 const { db, timestamp } = require("../admin");
 
 async function createList() {
+  console.info("Checking Top Cryptos");
   const { docs: Lists } = await db
     .collection("Lists")
     .orderBy("createdOn", "desc")
@@ -28,6 +29,8 @@ async function createList() {
 
   if (shouldUpdateList)
     await db.collection("Lists").add({ list, createdOn: timestamp() });
+
+  console.info(`List was ${shouldUpdateList ? "" : "NOT"} updated.`);
   return { success: true, updatedList: shouldUpdateList };
 }
 

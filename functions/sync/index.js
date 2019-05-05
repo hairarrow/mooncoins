@@ -7,7 +7,6 @@ const env = functions.config();
 async function sync() {
   const qs = {
     start: "1",
-    // convert: "USD,EUR,BTC", // Current plan is limited to 1 conversion
     convert: "USD",
     sort: "percent_change_24h",
     sort_dir: "desc"
@@ -53,5 +52,5 @@ exports.sync = functions.https.onRequest(async (_, res) => {
 });
 
 exports.scheduledSync = functions.pubsub
-  .schedule("every 5 minutes")
+  .schedule("every 1 minutes")
   .onRun(sync);
