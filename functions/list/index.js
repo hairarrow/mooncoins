@@ -1,5 +1,8 @@
 const functions = require("firebase-functions");
 const createList = require("./createList");
+const listUpdate = require("./listUpdate");
+
+exports.listUpdate = listUpdate;
 
 exports.createList = functions.https.onRequest(async (_, res) => {
   try {
