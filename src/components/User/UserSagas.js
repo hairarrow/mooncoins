@@ -17,7 +17,6 @@ function* watchAuth() {
   try {
     while (true) {
       const { userId, isAnonymous } = yield take(authEventsChannel);
-      console.log(userId, isAnonymous);
       if (isAnonymous) yield put({ type: actions.anonymousLogin, isAnonymous });
       if (userId) yield put({ type: actions.setId, userId });
     }
