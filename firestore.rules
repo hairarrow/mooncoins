@@ -7,5 +7,9 @@ service cloud.firestore {
     match /Currencies/{id} {
       allow read: if request.auth.uid != null;
     }
+
+    match /Users/{id} {
+      allow read: if request.auth.uid == id;
+    }
   }
 }
